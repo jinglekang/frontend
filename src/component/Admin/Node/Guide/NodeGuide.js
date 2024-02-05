@@ -58,20 +58,20 @@ export default function NodeGuide(props) {
         props.node
             ? props.node
             : {
-                  Status: 1,
-                  Type: 0,
-                  Aria2Enabled: "false",
-                  Server: "https://example.com:5212",
-                  SlaveKey: randomStr(64),
-                  MasterKey: randomStr(64),
-                  Rank: "0",
-                  Aria2OptionsSerialized: {
-                      token: randomStr(32),
-                      options: "{}",
-                      interval: "10",
-                      timeout: "10",
-                  },
-              }
+                Status: 1,
+                Type: 0,
+                Aria2Enabled: "false",
+                Server: "https://example.com:5200",
+                SlaveKey: randomStr(64),
+                MasterKey: randomStr(64),
+                Rank: "0",
+                Aria2OptionsSerialized: {
+                    token: randomStr(32),
+                    options: "{}",
+                    interval: "10",
+                    timeout: "10",
+                },
+            }
     );
 
     const usedSteps = useMemo(() => {

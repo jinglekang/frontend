@@ -127,22 +127,22 @@ export default function RemoteGuide(props) {
         props.policy
             ? props.policy
             : {
-                  Type: "remote",
-                  Name: "",
-                  Server: "https://example.com:5212",
-                  SecretKey: randomStr(64),
-                  DirNameRule: "uploads/{year}/{month}/{day}",
-                  AutoRename: "true",
-                  FileNameRule: "{randomkey8}_{originname}",
-                  IsOriginLinkEnable: "false",
-                  BaseURL: "",
-                  IsPrivate: "true",
-                  MaxSize: "0",
-                  OptionsSerialized: {
-                      file_type: "",
-                      chunk_size: 25 << 20,
-                  },
-              }
+                Type: "remote",
+                Name: "",
+                Server: "https://example.com:5200",
+                SecretKey: randomStr(64),
+                DirNameRule: "uploads/{year}/{month}/{day}",
+                AutoRename: "true",
+                FileNameRule: "{randomkey8}_{originname}",
+                IsOriginLinkEnable: "false",
+                BaseURL: "",
+                IsPrivate: "true",
+                MaxSize: "0",
+                OptionsSerialized: {
+                    file_type: "",
+                    chunk_size: 25 << 20,
+                },
+            }
     );
 
     const handleChange = (name) => (event) => {
@@ -328,7 +328,7 @@ export default function RemoteGuide(props) {
                                 <br />
                                 Mode = slave
                                 <br />
-                                Listen = :5212
+                                Listen = :5200
                                 <br />
                                 <br />
                                 [Slave]
@@ -691,7 +691,7 @@ export default function RemoteGuide(props) {
                                             onChange={handleChange("BaseURL")}
                                             required={
                                                 policy.IsOriginLinkEnable ===
-                                                    "true" && useCDN === "true"
+                                                "true" && useCDN === "true"
                                             }
                                             label={t("cdnPrefix")}
                                         />
