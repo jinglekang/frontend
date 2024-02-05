@@ -270,8 +270,8 @@ class UserSettingCompoment extends Component {
             this.props.viewMethod === "icon"
                 ? "list"
                 : this.props.viewMethod === "list"
-                ? "smallIcon"
-                : "icon";
+                    ? "smallIcon"
+                    : "icon";
         Auth.SetPreference("view_method", newMethod);
         this.props.changeView(newMethod);
     };
@@ -1071,7 +1071,7 @@ class UserSettingCompoment extends Component {
                                 button
                                 onClick={() =>
                                     window.open(
-                                        "https://github.com/cloudreve/cloudreve"
+                                        "https://github.com/jinglekang/cloudreve"
                                     )
                                 }
                             >
